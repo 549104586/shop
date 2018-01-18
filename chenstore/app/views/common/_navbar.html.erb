@@ -23,6 +23,15 @@
               </a>
 
               <ul class="dropdown-menu">
+                <% if current_user.admin?%>
+
+                    <li>
+
+                      <%= link_to("Admin 选单",admin_product_path) %>
+
+                    </li>
+                    <% end %>
+
                 <li>
                   <%= link_to destroy_user_session_path, method: :delete do %>
                       <i class="fa fa-sign-out">登出</i>
