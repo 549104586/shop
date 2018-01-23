@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def current_cart
 
-    @current_cart ||= find_cart
+    @current_cart ||= find_cart #当不存在值时将find_cart赋值给实例变量
   end
 
   private

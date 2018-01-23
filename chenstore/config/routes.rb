@@ -18,6 +18,17 @@ Rails.application.routes.draw do
 
   resource :cart
 
+  resource :cart do
+    collection do
+      post :clean
+    end
+
+
+  end
+
+  resource :cart_items
+
+
   resource :products do
 
     post :add_to_cart

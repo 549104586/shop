@@ -21,6 +21,11 @@ class Cart < ApplicationRecord
 
   end
 
+  def clean!
+
+    cart_items.destory_all
+  end
+
 
 
 end

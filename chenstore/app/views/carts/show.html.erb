@@ -2,32 +2,38 @@
 
   <div class="col-lg-12 col-md-12">
 
+
+    <%= link_to("清空购物车",clean_cart_path,method: :post,class: "pull-right",style:"text-decoration:none",data:{confirm:"你确定要清空整个购物车？"})%>
+
     <h2>购物车</h2>
     <table class=" table table-bordered">
       <thead>
 
       </thead>
       <tr>
-        <td>
+        <td style="text-align: center;width:12%">
           <input type="checkbox">
 
         </td>
-        <td class="col-lg-3 col-md-2 col-sm-3" style="text-align: center">
+        <td  style="text-align: center;width:12%">
           商品资讯
         </td>
-        <td class="col-lg-2 col-md-2 col-sm-3" style="text-align: center">
+        <td  style="text-align: center;width:12%">
           商品名
         </td>
 
-        <td class="col-lg-3 col-md-2 col-sm-3" style="text-align: center">
+        <td  style="text-align: center;width:12%">
           描述
         </td>
 
-        <td class="col-lg-3 col-md-2 col-sm-3" style="text-align: center">
+        <td  style="text-align: center;width:12%">
           价格
         </td>
-        <td class=" col-lg-3 col-md-2 col-sm-3" style="text-align: center">
+        <td  style="text-align: center;width:12%">
           数量
+        </td>
+        <td  style="text-align:center;width:12%">
+          操作选项
         </td>
       </tr>
 
@@ -67,7 +73,24 @@
             </td>
 
             <td>
-              <%= cart_item.product.quantity %>
+              <%#= cart_item.product.quantity %>
+
+              <% carts = current_cart.cart_items.find_by(id:cart_item.product_id)%>
+
+
+              <%form_for cart_item,url:cart_item_path(cart_item.product_id) do |f| %>
+
+              <%= f.select :quantity,1..cart_item.product.quantity%>
+              <%= f.submit "更新",data:{disable_with: "Submiting.."}%>
+              <% end %>
+
+
+            </td>
+            <td>
+              <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
+                  <i class="fa fa-trash"></i>
+              <% end %>
+
             </td>
 
         <% end %>
