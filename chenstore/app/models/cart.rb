@@ -8,6 +8,7 @@ class Cart < ApplicationRecord
   def add_product_to_cart(product)
 
     ci = cart_items.build
+    binding.pry
     ci.product = product
     ci.quantity = 1
     ci.save
@@ -23,7 +24,7 @@ class Cart < ApplicationRecord
 
   def clean!
 
-    cart_items.destory_all
+    cart_items.destroy_all
   end
 
 

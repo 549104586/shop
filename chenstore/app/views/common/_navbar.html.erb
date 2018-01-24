@@ -41,6 +41,12 @@
                     </li>
                     <% end %>
 
+
+                <li>
+                  <%= link_to("个人订单列表",account_orders_path)%>
+
+                </li>
+
                 <li>
                   <%= link_to destroy_user_session_path, method: :delete do %>
                       <i class="fa fa-sign-out">登出</i>

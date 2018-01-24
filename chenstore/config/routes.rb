@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
-  get 'carts/show'
 
-  get 'carts/index'
+  resource :orders
 
-  get 'carts/new'
+  namespace :account do
+   resource :orders
+  end
 
-  get 'products/index'
-
-  get 'products/show'
 
   devise_for :users
   root 'products#index'
@@ -21,6 +19,7 @@ Rails.application.routes.draw do
   resource :cart do
     collection do
       post :clean
+      post :checkout
     end
 
 

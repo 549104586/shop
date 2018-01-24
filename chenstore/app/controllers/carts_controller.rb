@@ -8,6 +8,13 @@ class CartsController < ApplicationController
   def new
   end
 
+  def checkout
+
+    @order = Order.new
+
+  end
+
+
   def clean
 
     current_cart.clean!
