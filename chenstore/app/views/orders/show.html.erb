@@ -14,28 +14,70 @@
         </th>
       </tr>
       </thead>
+      <tbody>
+      <% @product_lists.each do |list| %>
+          <tr>
+            <th>
+              <%= list.product_name %>
+            </th>
+            <th>
+              <%= list.product_price %>
+            </th>
+
+          </tr>
+      <% end %>
+      </tbody>
     </table>
-     <tbody>
-     <% @product_lists.each do|list|%>
-         <tr>
-           <th>
-             <%= list.product_name%>
-           </th>
-           <th>
-             <%= list.product_price%>
-           </th>
 
-         </tr>
+    <div class="total clearfix">
+      <span class="pull-right">
+
+        总计<%= @order.total%>CNY
+      </span>
+    </div>
+    <hr>
+
+    <table>
+      <tbody>
+      <tr>
+        <td>
+          订购人
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= @order.billing_name%>-<%= @order.billing_address%>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          收件人
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= @order.shipping_name%>-<%= @order.shipping_address%>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
 
 
 
 
-     <% end %>
+    <% if !@order.paid_at %>
 
+    <div class="group pull-right">
+      <%= link_to("以支付宝支付",pay_with_alipay_order_path(@order.token),:method =>:post,:class=>"btn btn-danger")%>
+      <%= link_to("微信支付",pay_with_wechat_order_path(@order.token),:method =>:post,:class=>'btn btn-danger')%>
+    </div>
 
+    <% else %>
 
-     </tbody>
+    <p class="text-center">此订单已完成付款</p>
 
+    <% end %>
 
   </div>
 </div>

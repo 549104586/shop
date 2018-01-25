@@ -11,7 +11,7 @@ Rails.application.configure do
 
   #for devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
+  config.action_mailer.delivery_method = :letter_opener
 
   # Show full error reports.
   config.consider_all_requests_local = true

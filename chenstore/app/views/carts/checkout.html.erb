@@ -2,38 +2,21 @@
 
   <div class="col-lg-12 col-md-12">
 
-
-    <%= link_to("清空购物车",clean_cart_path,method: :post,class: "pull-right",style:"text-decoration:none",data:{confirm:"你确定要清空整个购物车？"})%>
-
-    <h2>购物车</h2>
+    <h2>购物明细</h2>
     <table class=" table table-bordered">
       <thead>
 
       </thead>
       <tr>
-        <td style="text-align: center;width:12%">
-          <input type="checkbox">
-
+        <td  style="text-align: center;width:12%">
+          商品明细
         </td>
         <td  style="text-align: center;width:12%">
-          商品资讯
-        </td>
-        <td  style="text-align: center;width:12%">
-          商品名
+          单价
         </td>
 
-        <td  style="text-align: center;width:12%">
-          描述
-        </td>
-
-        <td  style="text-align: center;width:12%">
-          价格
-        </td>
         <td  style="text-align: center;width:12%">
           数量
-        </td>
-        <td  style="text-align:center;width:12%">
-          操作选项
         </td>
       </tr>
 
@@ -44,33 +27,20 @@
         <% current_cart.cart_items.each do |cart_item| %>
 
             <td>
-              <%= link_to product_path(cart_item.product) do %>
-                  <% if cart_item.product.image.persent? %>
+              <%= link_to (cart_item.product.title,product_path(cart_item.product)) %>
 
-                      <%= image_tag(cart_item.product.url, class: "thumbnail") %>
-
-                  <% else %>
-
-                      <%= image_tag("http://placholder.it/400*400&text=No Pic", class: "thumbnail") %>
-
-
-                  <% end %>
-
-              <% end %>
             </td>
 
-
-            <td>
-              <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
-            </td>
-
-            <td>
-              <%= cart_item.product.description %>
-            </td>
 
             <td>
               <%= cart_item.product.price %>
             </td>
+
+            <td>
+              <%= cart_item.product.quantity %>
+            </td>
+
+
 
             <td>
               <%#= cart_item.product.quantity %>
@@ -108,10 +78,48 @@
       </span>
     </div>
 
-    <div class="checkbox clearfix">
+    <hr>
+    <h2>
+      订单资讯
+    </h2>
 
-      <%= link_to("确认结账",checkout_cart_path,method: :post,class:"btn btn-lg btn-danger pull-right")%>
+    <div class="order-form">
+
+      <%= simple_form_for @order do |f|%>
+
+          <legend>订购人</legend>
+      <div class="form-group col-lg-6">
+        <%= f.input :billing_name%>
+      </div>
+          <div class="form-group col-lg-6">
+            <%= f.input :billing_address%>
+          </div>
+          <legend>收货人</legend>
+          <div class="form-group col-lg-6">
+            <%= f.input :shipping_name%>
+          </div>
+          <div class="form-group col-lg-6">
+            <%= f.input :shipping_address%>
+          </div>
+
+          <div class="checkout">
+
+            <%= f.submit "生成订单", class:"btn btn-lg btn-danger pull-right",data:{disable_with:"Submitting..."}%>
+
+          </div>
+      <% end %>
+
+
     </div>
+
+
+
+
+
+    <!--<div class="checkbox clearfix">-->
+
+      <!--<%#= link_to("确认结账","#",method: :post,class:"btn btn-lg btn-danger pull-right")%>-->
+    <!--</div>-->
 
   </div>
 

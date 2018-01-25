@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
 
-  resource :orders
+  resources :orders
 
   namespace :account do
-   resource :orders
+   resources :orders
+  end
+
+  resources :orders do
+    member do
+
+      post :pay_with_alipay
+      post :pay_with_wechat
+    end
+
   end
 
 
@@ -25,14 +34,17 @@ Rails.application.routes.draw do
 
   end
 
-  resource :cart_items
+  resources :cart_items
 
 
-  resource :products do
+  resources :products do
+    member do
 
     post :add_to_cart
 
-  end
+    end
+
+    end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
