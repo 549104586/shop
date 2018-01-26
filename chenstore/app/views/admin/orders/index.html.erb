@@ -1,2 +1,51 @@
-<h1>Admin::Orders#index</h1>
-<p>Find me in app/views/admin/orders/index.html.erb</p>
+<h2>
+  订单列表
+</h2>
+<table>
+  <thead>
+  <tr>
+    <th>
+      #
+    </th>
+    <th>
+      生成时间
+    </th>
+    <th>
+      订购者
+    </th>
+    <th>
+      订单状态
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order|%>
+  <tr>
+    <td>
+      <%= link_to(order.id,admin_order_path(order))%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= order.created_at.to_s(:long)%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= order.user.eamil%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= order.assm_state%>
+    </td>
+  </tr>
+
+
+  <% end %>
+
+
+
+  </tbody>
+</table>
+<%= will_paginate @orders%>

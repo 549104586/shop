@@ -8,7 +8,6 @@ class Cart < ApplicationRecord
   def add_product_to_cart(product)
 
     ci = cart_items.build
-    binding.pry
     ci.product = product
     ci.quantity = 1
     ci.save
@@ -18,7 +17,7 @@ class Cart < ApplicationRecord
 
   def total_price
 
-      cart_items.map{|ci| ci.quantity*ci.price.to_i}.sum
+      cart_items.map{|ci| ci.quantity*ci.product.price.to_i}.sum
 
   end
 

@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
 
     #current_cart.add_product_to_cart(@product)
 
-    if !current_cart.product.include?(@product)
+    if !current_cart.products.include?(@product)
 
       current_cart.add_product_to_cart(@product)
 
@@ -27,11 +27,18 @@ class ProductsController < ApplicationController
       flash[:notice] = "你的购物车已经有此物品哦～"
     end
 
+    if params[:redirect]
 
+      @url = params[:redirect]
 
+    else
 
+      @url = request.env["HTTP_REFEER"]
+      @url ||= url_for :controller => "products",:action=>"index"
 
-    redirct_to :back
+    end
+
+    redirect_to @url
 
 
   end
