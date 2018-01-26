@@ -6,7 +6,7 @@
 
     <%= link_to product_path(product) do%>
 
-    <% if product.image.persent?%>
+    <% if product.image.present?%>
 
         <%= image_tag(product.image.thumb.url,class:"thumbnail") %>
 
@@ -18,12 +18,14 @@
         <% end %>
 
     <% end %>
-
+    <div style="margin-bottom:30px">
     <%= product.title %> ￥ <%= product.price%>
+    </div>
 
   </div>
 
       <% end %>
+
 
   <div>
 

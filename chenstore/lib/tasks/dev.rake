@@ -7,7 +7,7 @@ namespace :dev do
     10.times do
 
       Product.create!(:title => Faker::Commerce.product_name,
-                      :description => Faker::Lorem.pargraph,
+                      :description => Faker::Lorem.paragraph,
                       :quantity => rand(100),
                       :price => (rand(100)+1*10) )
 
@@ -18,7 +18,7 @@ namespace :dev do
 
   task :fake_users => :environment do
 
-    10.times  do
+    10.times do
 
       User.create!(:email => Faker:: Internet.email,:password => "123456")
 
@@ -27,7 +27,7 @@ namespace :dev do
   end
 
 
-  task :fake_orders =>:enviroment do
+  task :fake_orders => :environment do
 
     users = User.all
     products =  Product.all
@@ -39,14 +39,29 @@ namespace :dev do
                       :billing_name => Faker::Name.name,
                       :billing_address => Faker::Address.street_address,
                       :shipping_name => Faker::Name.name,
-                      :shipping_adddres => Faker::Address.street_address,
+                      :shipping_address => Faker::Address.street_address,
 
       )
+
+      products.sample(rand(3)+1).each do |p|
+
+        order.product_lists.build(:product_name => p.title,
+                                  :product_price =>p.price,
+                                  :quantity => rand(5)+1,
+        )
+
+      end
+
+
+
+
 
       order.total = order.product_lists.map{|p|p.product_price*p.quantity}.sum
       order.save!
 
-      %w[piad shipping shipped order_cancelled good_returned].each do|state|
+      end
+
+      %w[paid shipping shipped order_cancelled good_returned].each do|state|
 
         Order.all.sample(10).each do |o|
           o.update_columns(:aasm_state => state,
@@ -62,7 +77,7 @@ namespace :dev do
 
     end
 
-  end
+
 
 
 
