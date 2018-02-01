@@ -65,7 +65,7 @@ namespace :dev do
 
         Order.all.sample(10).each do |o|
           o.update_columns(:aasm_state => state,
-                           :paid_at => Time.now-(rand(100)+1)*3600,
+                           :paid_at => [true,false].sample,
                            :payment_method =>["alipay","wechat"].sample)
 
         end

@@ -8,7 +8,7 @@
 
     <% else %>
 
-        <%= image_tag("http://placehold.it/400*400&text=No Pic",class:'thumbnail')%>
+        <%= image_tag("http://placehold.it/300x300&text=No Pic",class:'thumbnail')%>
 
     <% end %>
 
@@ -40,7 +40,7 @@
 
       <% if @product.quantity.present? && @product.quantity > 0%>
 
-      <%= link_to("加入购物车",add_to_cart_product_path(@product))%>
+      <%= link_to("加入购物车",add_to_cart_product_path(@product),class:"btn btn-danger")%>
 
       <% else %>
       已销售一空，无法购买
