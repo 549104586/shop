@@ -3,11 +3,27 @@ class ProductsController < ApplicationController
 
     @products = Product.all
 
-  end
+end
+
+  def search
+
+    @products = Product.search(title_cont:params[:q]['title_cont'].strip).result
+
+
+
+    end
 
   def show
+    begin
 
     @product = Product.find(params[:id])
+
+    rescue Exception => e
+      puts e.message
+      #puts e.backtrace.inspect
+      redirect_to(:action=>'index')
+      #redirect_to '/products/index' 会显示重定向太多
+    end
 
   end
 

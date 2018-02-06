@@ -1,61 +1,48 @@
 Rails.application.routes.draw do
+  devise_for :users
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-
-  resources :orders
-
-  namespace :account do
-   resources :orders
-  end
-
+  post 'products/search'
   resources :orders do
     member do
-
       post :pay_with_alipay
       post :pay_with_wechat
-    end
-
-  end
-
-
-  devise_for :users
-  root 'products#index'
-
-  namespace :admin do
-    resources :products
-    resources :orders do
-      member do
-
-        post :cancel
-        post :ship
-        post :shipped
-        post :return
-
-      end
+      post :apply_to_cancel
     end
   end
 
-  resource :cart
+  namespace :account do
+    resources :orders
+  end
 
   resource :cart do
     collection do
       post :clean
       post :checkout
     end
-
-
   end
 
   resources :cart_items
 
-
   resources :products do
     member do
-
-    get :add_to_cart
-
+      post :add_to_cart
+      post :search
     end
+  end
 
+  namespace :admin do
+    resources :products
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
     end
+  end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "products#index"
+
 end
