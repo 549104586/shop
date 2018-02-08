@@ -1,7 +1,23 @@
 class ProductsController < ApplicationController
   def index
 
+    if !params['title_cont'].nil?
+      @products = Product.search(title_start_all:params['title_cont'].strip).result
+      p '--------products----'
+
+      respond_to do |format|
+
+        format.js{render :file=>'products/search.js.erb'}
+
+      end
+
+      p @products.title
+    else
     @products = Product.all
+
+end
+
+
 
 end
 
@@ -9,11 +25,14 @@ end
 
     @products = Product.search(title_cont:params[:q]['title_cont'].strip).result
 
-
-
     end
 
   def show
+    p '--------------------------------------'
+    p params["title_cont"]
+
+
+
     begin
 
     @product = Product.find(params[:id])
@@ -21,7 +40,8 @@ end
     rescue Exception => e
       puts e.message
       #puts e.backtrace.inspect
-      redirect_to(:action=>'index')
+      redirect_to(:action=>'index',"title_cont"=>params['title_cont'])
+
       #redirect_to '/products/index' 会显示重定向太多
     end
 

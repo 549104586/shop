@@ -1,16 +1,21 @@
 <div class="row">
   <div class="col-lg-3 col-lg-offset-5" style="margin-bottom: 2%">
-    <%= form_tag action:'search',method: :post do %>
+    <%= form_tag action:'search',method: :get do %>
       <div class="form-group">
         <div class="input-group">
        <span class="input-group-btn">
          <button type="submit" class="btn bth-default">搜索</button>
        </span>
-        <%= search_field_tag('q[title_cont]',params["q"] && params['q']['title_cont'],placeholder:"默认提示",class:'form-control')%>
+          <%= search_field_tag('q[title_cont]',params["q"] && params['q']['title_cont'],placeholder:"默认提示",class:'form-control')%>
         </div>
       </div>
     <% end %>
+
+    <div style="width: 100px;" id="counter">
+    </div>
   </div>
+
+
 
 </div>
 
@@ -52,3 +57,39 @@
   </div>
 
 </div>
+<script>
+
+  var timeout = 0;
+  var ajaxCache = {};//定义缓存对象
+    $("input").keyup(function(){
+
+        var inputValue = $(this).val();
+        clearTimeout(timeout);
+        timeout = setTimeout(function(){
+
+            if(!!ajaxCache[inputValue]){
+                //显示自动提示框，给框里填相关联词条的内容
+
+            }else{
+
+                $.ajax({
+                    type:'get',
+                    url:'http://localhost:3003/products/search',
+                    data:{'title_cont':inputValue},
+                    success:function(data){
+                        //显示自动提示框,给框里填关联词条的内容
+                        console.log(data);
+                        ajaxCache[inputValue] = [];
+                        ajaxCache[inputValue] = data;//给缓存对象赋值
+                    },
+                    error:function(){
+                        alert('error');
+                    }
+                });
+            }
+
+        },1000);
+
+    });
+
+</script>

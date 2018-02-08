@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="117747c1-dda6-4d0e-a782-deba8e7d08a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shop.iml" afterPath="$PROJECT_DIR$/.idea/shop.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/Gemfile" afterPath="$PROJECT_DIR$/chenstore/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/Gemfile.lock" afterPath="$PROJECT_DIR$/chenstore/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/app/controllers/orders_controller.rb" afterPath="$PROJECT_DIR$/chenstore/app/controllers/orders_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/chenstore/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/app/models/product.rb" afterPath="$PROJECT_DIR$/chenstore/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/app/views/carts/checkout.html.erb" afterPath="$PROJECT_DIR$/chenstore/app/views/carts/checkout.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/app/views/carts/show.html.erb" afterPath="$PROJECT_DIR$/chenstore/app/views/carts/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/app/views/products/index.html.erb" afterPath="$PROJECT_DIR$/chenstore/app/views/products/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/bin/rails" afterPath="$PROJECT_DIR$/chenstore/bin/rails" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/bin/rake" afterPath="$PROJECT_DIR$/chenstore/bin/rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/config/application.rb" afterPath="$PROJECT_DIR$/chenstore/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/config/database.yml" afterPath="$PROJECT_DIR$/chenstore/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/config/environments/development.rb" afterPath="$PROJECT_DIR$/chenstore/config/environments/development.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/config/routes.rb" afterPath="$PROJECT_DIR$/chenstore/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chenstore/config/secrets.yml" afterPath="$PROJECT_DIR$/chenstore/config/secrets.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,31 +60,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="124" lean-forward="false" selection-start-line="8" selection-start-column="124" selection-end-line="8" selection-end-column="124" />
-              <folding />
+            <state relative-caret-position="234">
+              <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="14" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="products_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chenstore/app/controllers/products_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="144">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/search.html.erb">
+      <file leaf-file-name="search.js.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/search.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,8 +96,8 @@
       <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chenstore/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="360">
+              <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -136,6 +125,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Erb File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -161,10 +157,11 @@
         <option value="$PROJECT_DIR$/chenstore/config/application.rb" />
         <option value="$PROJECT_DIR$/chenstore/config/database.yml" />
         <option value="$PROJECT_DIR$/jdstore_cart_items.sql" />
-        <option value="$PROJECT_DIR$/chenstore/app/views/products/index.html.erb" />
         <option value="$PROJECT_DIR$/chenstore/app/views/products/search.html.erb" />
         <option value="$PROJECT_DIR$/chenstore/Gemfile" />
         <option value="$PROJECT_DIR$/chenstore/config/routes.rb" />
+        <option value="$PROJECT_DIR$/chenstore/app/views/products/search.js.erb" />
+        <option value="$PROJECT_DIR$/chenstore/app/views/products/index.html.erb" />
         <option value="$PROJECT_DIR$/chenstore/app/controllers/products_controller.rb" />
       </list>
     </option>
@@ -176,9 +173,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
-    <option name="width" value="1600" />
-    <option name="height" value="873" />
+    <option name="x" value="634" />
+    <option name="y" value="51" />
+    <option name="width" value="966" />
+    <option name="height" value="849" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -566,21 +564,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517471201228</updated>
-      <workItem from="1517471202874" duration="35711000" />
+      <workItem from="1517471202874" duration="61989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35711000" />
+    <option name="totallyTimeSpent" value="61989000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1600" height="873" extended-state="6" />
+    <frame x="634" y="51" width="966" height="849" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15637065" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26413044" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6658196" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12211669" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -591,7 +590,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -607,22 +605,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chenstore/app/views/order_mailer/notify_order_placed.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenstore/app/views/order_mailer/apply_cancel.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chenstore/app/views/order_mailer/notify_ship.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -985,14 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/search.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chenstore/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1001,27 +975,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chenstore/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/search">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/search.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="124" lean-forward="false" selection-start-line="8" selection-start-column="124" selection-end-line="8" selection-end-column="124" />
+        <state relative-caret-position="-47">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chenstore/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chenstore/app/controllers/products_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/search.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chenstore/app/views/products/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
