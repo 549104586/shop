@@ -3,15 +3,12 @@ class ProductsController < ApplicationController
 
     if !params['title_cont'].nil?
       @products = Product.search(title_start_all:params['title_cont'].strip).result
-      p '--------products----'
 
       respond_to do |format|
 
         format.js{render :file=>'products/search.js.erb'}
 
       end
-
-      p @products.title
     else
     @products = Product.all
 
@@ -28,7 +25,6 @@ end
     end
 
   def show
-    p '--------------------------------------'
     p params["title_cont"]
 
 
@@ -36,7 +32,6 @@ end
     begin
 
     @product = Product.find(params[:id])
-
     rescue Exception => e
       puts e.message
       #puts e.backtrace.inspect
